@@ -1,8 +1,10 @@
 const express = require("express");
 const shopRoutes = express.Router();
+let items = require("./items.js");
 
 shopRoutes.get("/items", (req, res)=>{
-    res.send("It's working!!!");
+    //res.send("It's working!!!");
+    res.json(items);
 }); 
 
 shopRoutes.post("/items", (req, res)=>{
